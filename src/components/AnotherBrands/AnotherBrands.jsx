@@ -3,9 +3,6 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import image from "../../../src/img/joker2.png";
 
-
-
-
 // import fwb from "../../images/fwb.png";
 
 function AnotherBrands({
@@ -118,34 +115,38 @@ function AnotherBrands({
   return (
 
     <section id="home" class="hero-section go-zoom-1">
-    <div class="container">
+      <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-12">
-                <div class="hero-content top-greadient">
-                    <h1 class="wow fadeInLeft mb-20" data-wow-delay=".2s"> {t("Hello, summer!")}</h1>
-                    <h4 class="wow fadeInUp" data-wow-delay=".4s">
-                      {t("We've handpicked the most exclusive and jaw-dropping bonuses from top-tier online casinos just for you. The Joker's treasure trove of rewards is just a click away!")}
-                    </h4>
-                    
-                </div>
-                {otherData.length > 0 ? (
-                      otherData.slice(0, 1).map((rowData, index) => (
-                            <a key={index} target="_blank" href={rowData["GoBig"] + newUrl + "L_enchanted-forest_random"} className="main-btn btn-hover wow fadeInUp" >
-                                <span>{t("TRY YOUR LUCK")}</span>
-                            </a>
-                               ))
-                               ) : (
-                                 <p className="ti">{t("No brands available for your country")}</p>
-                               )}
+          <div class="col-lg-12">
+            <div class="hero-content top-greadient">
+              <h1 class="wow fadeInLeft mb-20" data-wow-delay=".2s"> {t("Hello, summer!")}</h1>
+              <h4 class="wow fadeInUp" data-wow-delay=".4s">
+                {t("We've handpicked the most exclusive and jaw-dropping bonuses from top-tier online casinos just for you. The Joker's treasure trove of rewards is just a click away!")}
+              </h4>
+
             </div>
-            {/* <div class="col-lg-6">
+            {otherData.length > 0 ? (
+              otherData.slice(0, 1).map((rowData, index) => (
+                <a key={index} target="_blank" href={rowData["GoBig"] + newUrl + "L_enchanted-forest_random"} class="button-drawing type--A">
+                  <div class="button__line"></div>
+                  <div class="button__line"></div>
+                  <span class="button__text">{t("TRY YOUR LUCK")}</span>
+                  <div class="button__drow1"></div>
+                  <div class="button__drow2"></div>
+                </a>
+              ))
+            ) : (
+              <p className="ti">{t("No brands available for your country")}</p>
+            )}
+          </div>
+          {/* <div class="col-lg-6">
                 <div class="hero-img wow fadeInRight" data-wow-delay=".5s">
                 <img src={`.${image}`} alt={`.${image}`} />
                 </div>
             </div> */}
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
   );
 }

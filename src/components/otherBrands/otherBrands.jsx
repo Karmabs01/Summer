@@ -136,7 +136,7 @@ function OtherBrands({
   return (
     <div>
       {otherData.length > 0 && (
-        <div id="ttsmartblog" className="style2 my-40 my-sm-25 bottom-to-top hb-animate-element">
+        <div id="ttsmartblog" className="style2 my-40 my-sm-25">
           <div className="tt-title d-inline-block float-none w-100 text-center text-capitalize">{t("Joker's New Favorites: Fresh and Exciting Casinos")}</div>
           <div className="container">
             <div className="smartblog-content row">
@@ -146,10 +146,10 @@ function OtherBrands({
                     <div className="item">
                       <div className="ttblog_image_holder">
                         <a href={
-                              rowData["GoBig"] +
-                              newUrl +
-                              "L_enchanted-forest_2"
-                            }>
+                          rowData["GoBig"] +
+                          newUrl +
+                          "L_enchanted-forest_2"
+                        }>
                           <img src={rowData["LinkImg"]} alt={rowData["LinkImg"]} />
                         </a>
                       </div>
@@ -177,22 +177,23 @@ function OtherBrands({
             </div>
           </div>
           {isAllElements ? (
-        <a
-          target="_blank"
-          href={`https://topbon.us/${newUrl}L_enchanted-forest_1`}
-          className="main-btn btn-hover"
-        >
-          <span>{t("More offers")}</span>
-        </a>
-      ) : (
-        <a
-          target="_blank"
-          onClick={loadMoreItems}
-          className="main-btn btn-hover"
-        >
-          <span>{t("Show more")}</span>
-        </a>
-      )}
+            <a href={`https://topbon.us/${newUrl}L_enchanted-forest_1`} class="button-drawing type--A" target="_blank">
+              <div class="button__line"></div>
+              <div class="button__line"></div>
+              <span class="button__text">{t("More offers")}</span>
+              <div class="button__drow1"></div>
+              <div class="button__drow2"></div>
+            </a>
+          ) : (
+            <a class="button-drawing type--A" target="_blank"
+              onClick={loadMoreItems}>
+              <div class="button__line"></div>
+              <div class="button__line"></div>
+              <span class="button__text">{t("Show more")}</span>
+              <div class="button__drow1"></div>
+              <div class="button__drow2"></div>
+            </a>
+          )}
         </div>
       )}
     </div>
