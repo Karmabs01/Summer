@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import image from "../../../src/img/joker2.png";
 
 // import fwb from "../../images/fwb.png";
 
