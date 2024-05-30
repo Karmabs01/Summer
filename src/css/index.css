@@ -50,7 +50,7 @@
 
   --header-background-color: linear-gradient(180deg, rgba(121,109,45,0.7903536414565826) 11%, #dfcd9c 88%);
   --background-color: #dfcd9c;
-  --footer-background-color: linear-gradient(0deg, rgba(121,109,45,0.7903536414565826) 11%, #dfcd9c 88%);
+  --footer-background-color: linear-gradient(0deg, rgba(121,109,45,0.5) 11%, #dfcd9c63 88%);
   ;
   /* --radial: radial-gradient(#968768, #968768, #968768); */
   --header-font-color: #000000;
@@ -838,7 +838,6 @@ img {
   z-index: 1;
   padding: 220px 0 30px;
   text-align: center !important;
-  height: 100vh;
   background-image: url(../img/beach-2.jpg);
   background-size: cover;
 }
@@ -2788,6 +2787,7 @@ body {
   padding: 0;
   margin: 0;
   background: var(--background-color);
+  background-image: url(../img/sand-op.png);
   /* overflow-x: auto; */
 }
 

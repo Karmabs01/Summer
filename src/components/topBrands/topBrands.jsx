@@ -135,15 +135,15 @@ function TopBrands({
 
           // Перемешиваем данные перед отображением
           if (isShuffled) {
-          for (let i = filteredDataWithTopData.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [filteredDataWithTopData[i], filteredDataWithTopData[j]] = [
-              filteredDataWithTopData[j],
-              filteredDataWithTopData[i],
-            ];
+            for (let i = filteredDataWithTopData.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [filteredDataWithTopData[i], filteredDataWithTopData[j]] = [
+                filteredDataWithTopData[j],
+                filteredDataWithTopData[i],
+              ];
+            }
+            setIsShuffled(true);
           }
-          setIsShuffled(true);
-        }
           setData(showData(filteredDataWithTopData));
 
           setTopData([...topData]);
@@ -173,32 +173,35 @@ function TopBrands({
   return (
     <div>
       {data.length > 0 && (
-        <section id="top-brand" class="game-section pt-30 pb-55">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10">
-                <div class="section-title text-center right-greadient mb-50">
-                  <h2 class="mb-25">{t("Joker's New Favorites: Fresh and Exciting Casinos")}</h2>
-                </div>
-              </div>
-            </div>
-            <div class="row">
+        <div id="ttsmartblog" className="style2 my-40 my-sm-25">
+          <div className="tt-title d-inline-block float-none w-100 text-center text-capitalize">{t("Summer is coming! Fresh and Exciting Casinos are waiting! ")}</div>
+          <div className="container">
+            <div className="smartblog-content row">
               {data.map((rowData, index) => (
-                <div class="col-xl-3 col-md-6 col-sm-6" key={index}>
-                  <div class="single-game box-inner-shadow">
-                    <div className="game_thumb">
-                      <img src={rowData["LinkImg"]} alt={rowData["LinkImg"]} />
-
-                      <p class="mb-15">{rowData["OurOfferContent"]}</p>
-
-                      <div className="game__overlay">
-                        <a class="play-btn btn-hover" href={
-                          rowData["GoBig"] +
-                          newUrl +
-                          "L_enchanted-forest_1"
-                        }>
-                          {t("Play Now!")}
-                        </a>
+                <div className="ttblog  col-xl-3 col-lg-3">
+                  <div className="item">
+                    <div className="ttblog_image_holder">
+                      <a href={
+                        rowData["GoBig"] +
+                        newUrl +
+                        "L_enchanted-forest_2"
+                      }>
+                        <img src={rowData["LinkImg"]} alt={rowData["LinkImg"]} />
+                      </a>
+                    </div>
+                    <div className="blog-content-wrap float-left w-100">
+                      <div className="blog_inner">
+                        <h4 className="blog-title"><span>{rowData["CasinoBrand"]}</span></h4>
+                        <div className="blog-desc">{rowData["OurOfferContent"]}</div>
+                        <div className="read-more text-capitalize">
+                          <a className="readmore" href={
+                            rowData["GoBig"] +
+                            newUrl +
+                            "L_enchanted-forest_2"
+                          }>
+                            {t("Play Now!")}
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -206,31 +209,29 @@ function TopBrands({
               )
               )}
             </div>
-            <div class="view-all-btn text-center pt-30">
-              {isAllElements ? (
-                <a
-                  target="_blank"
-                  href={`https://topbon.us/${newUrl}L_enchanted-forest_1`}
-                  className="main-btn btn-hover"
-                >
-                  <span>{t("More offers")}</span>
-                </a>
-              ) : (
-                <a
-                  target="_blank"
-                  onClick={loadMoreItems}
-                  className="main-btn btn-hover"
-                >
-                  <span>{t("Show more")}</span>
-                </a>
-              )}
-
             </div>
+            {isAllElements ? (
+              <a href={`https://topbon.us/${newUrl}L_enchanted-forest_1`} class="button-drawing type--A" target="_blank">
+                <div class="button__line"></div>
+                <div class="button__line"></div>
+                <span class="button__text">{t("More offers")}</span>
+                <div class="button__drow1"></div>
+                <div class="button__drow2"></div>
+              </a>
+            ) : (
+              <a class="button-drawing type--A" target="_blank"
+                onClick={loadMoreItems}>
+                <div class="button__line"></div>
+                <div class="button__line"></div>
+                <span class="button__text">{t("Show more")}</span>
+                <div class="button__drow1"></div>
+                <div class="button__drow2"></div>
+              </a>
+            )}
           </div>
-        </section>
       )}
-    </div>
-  );
+        </div>
+      );
 }
 
-export default TopBrands;
+      export default TopBrands;
