@@ -48,7 +48,7 @@
   --box-shadow: 1px 1px 15px 0px rgba(255, 201, 39, 0.513), 1px 1px 15px 0px rgba(255, 81, 1, 0.39);
   --border: 1px solid rgba(255, 115, 0, 0.144); */
 
-  --header-background-color: linear-gradient(90deg, rgba(197, 107, 110, 0.95) 17%, rgba(230, 218, 153, 0.95) 88%);;
+  --header-background-color: linear-gradient(180deg, rgba(121,109,45,0.7903536414565826) 11%, #dfcd9c 88%);
   --background-color: #dfcd9c;
   --footer-background-color: linear-gradient(0deg, rgba(121,109,45,0.7903536414565826) 11%, #dfcd9c 88%);
   ;
@@ -5073,6 +5073,7 @@ p {
 
 .tt-title{
 	font-weight: 600;
+  font-size: 35px;
 	padding: 0 0 20px;
     margin: 0 0 30px;
 	position:relative;
