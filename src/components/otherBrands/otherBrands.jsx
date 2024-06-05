@@ -178,7 +178,7 @@ function OtherBrands({
               <div className="button__line"></div>
               <div className="button__line"></div>
               <span className="button__text">{t("Show more")}</span>
-              <div clclassNameass="button__drow1"></div>
+              <div className="button__drow1"></div>
               <div className="button__drow2"></div>
             </a>
           )}
