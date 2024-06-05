@@ -133,7 +133,7 @@ export function Faq() {
                   </div>
 
                   <div className="column">
-                    <label for="method" class="">
+                    <label for="method" className="">
                       Select Payment Method
                     </label>
                     <select

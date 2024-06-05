@@ -79,7 +79,7 @@ function AnotherBrands({
             filteredDataOther = responseData.brandsNew.filter(
               (rowData) =>
                 rowData.GEO === ipDataCode &&
-                rowData["Current Status"] === "Ongoing" &&
+                rowData["CurrentStatus"] === "Ongoing" &&
                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
@@ -113,33 +113,33 @@ function AnotherBrands({
 
   return (
 
-    <section id="home" class="hero-section go-zoom-1">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-12">
-            <div class="hero-content top-greadient">
-              <h1 class="wow fadeInLeft mb-20" data-wow-delay=".2s"> {t("Hello, summer!")}</h1>
-              <h4 class="wow fadeInUp" data-wow-delay=".4s">
+    <section id="home" className="hero-section go-zoom-1">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-12">
+            <div className="hero-content top-greadient">
+              <h1 className="wow fadeInLeft mb-20" data-wow-delay=".2s"> {t("Hello, summer!")}</h1>
+              <h4 className="wow fadeInUp" data-wow-delay=".4s">
                 {t("Discover top online casino offers, exclusive bonuses, free spins, and more. Try your luck with these sizzling summer deals!")}
               </h4>
 
             </div>
             {otherData.length > 0 ? (
               otherData.slice(0, 1).map((rowData, index) => (
-                <a key={index} target="_blank" href={rowData["GoBig"] + newUrl + "L_enchanted-forest_random"} class="button-drawing type--A">
-                  <div class="button__line"></div>
-                  <div class="button__line"></div>
-                  <span class="button__text">{t("TRY YOUR LUCK")}</span>
-                  <div class="button__drow1"></div>
-                  <div class="button__drow2"></div>
+                <a key={index} target="_blank" href={rowData["GoBig"] + newUrl + "L_enchanted-forest_random"} className="button-drawing type--A">
+                  <div className="button__line"></div>
+                  <div className="button__line"></div>
+                  <span className="button__text">{t("TRY YOUR LUCK")}</span>
+                  <div className="button__drow1"></div>
+                  <div className="button__drow2"></div>
                 </a>
               ))
             ) : (
               <p className="ti">{t("No brands available for your country")}</p>
             )}
           </div>
-          {/* <div class="col-lg-6">
-                <div class="hero-img wow fadeInRight" data-wow-delay=".5s">
+          {/* <div className="col-lg-6">
+                <div className="hero-img wow fadeInRight" data-wow-delay=".5s">
                 <img src={`.${image}`} alt={`.${image}`} />
                 </div>
             </div> */}

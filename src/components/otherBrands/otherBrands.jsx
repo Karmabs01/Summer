@@ -20,8 +20,7 @@ function OtherBrands({
   // const [visibleBrands, setVisibleBrands] = useState(8);
   const [step, setStep] = useState(4);
   const [isAllElements, setAllElements] = useState(false);
-  const [isExtraElements, setExtraElements] = useState(false);
-  const [isShuffled, setIsShuffled] = useState(false);
+
 
   // const handleShowMore = () => {
   //   setVisibleBrands((prevVisibleBrands) => prevVisibleBrands + 8);
@@ -45,7 +44,6 @@ function OtherBrands({
   }
 
   function loadMoreItems() {
-    setExtraElements(true);
     setStep(prevIndex => prevIndex + 4);
   }
 
@@ -96,10 +94,11 @@ function OtherBrands({
                 rowData["High_hybrid"] === "1"
             );
           }
-          console.log("EE", filteredDataOther)
+
           const arrLength = filteredDataOther.length / 2
 
           setOtherData(showData(filteredDataOther.slice(arrLength)));
+          // setOtherData(showData(filteredDataOther));
           setLoading(false);
 
           // Если нет брендов, вызывать setSelectedCountry
@@ -128,7 +127,6 @@ function OtherBrands({
         <div id="ttsmartblog" className="style2 my-40 my-sm-25">
           <div className="tt-title d-inline-block float-none w-100 text-center">{t("Exclusive Summer Specials – Limited Time Only! 🌞⏳")}</div>
           <div className="container">
-          <div className="palmAnimation"></div>
             <div className="smartblog-content row">
               {otherData.length > 0 ? (
                 otherData.map((rowData, index) => (
@@ -167,21 +165,21 @@ function OtherBrands({
             </div>
           </div>
           {isAllElements ? (
-            <a href={`https://topbon.us/${newUrl}L_enchanted-forest_1`} class="button-drawing type--A" target="_blank">
-              <div class="button__line"></div>
-              <div class="button__line"></div>
-              <span class="button__text">{t("More offers")}</span>
-              <div class="button__drow1"></div>
-              <div class="button__drow2"></div>
+            <a href={`https://topbon.us/${newUrl}L_enchanted-forest_1`} className="button-drawing type--A" target="_blank">
+              <div className="button__line"></div>
+              <div className="button__line"></div>
+              <span className="button__text">{t("More offers")}</span>
+              <div className="button__drow1"></div>
+              <div className="button__drow2"></div>
             </a>
           ) : (
-            <a class="button-drawing type--A" target="_blank"
+            <a className="button-drawing type--A" target="_blank"
               onClick={loadMoreItems}>
-              <div class="button__line"></div>
-              <div class="button__line"></div>
-              <span class="button__text">{t("Show more")}</span>
-              <div class="button__drow1"></div>
-              <div class="button__drow2"></div>
+              <div className="button__line"></div>
+              <div className="button__line"></div>
+              <span className="button__text">{t("Show more")}</span>
+              <div clclassNameass="button__drow1"></div>
+              <div className="button__drow2"></div>
             </a>
           )}
         </div>

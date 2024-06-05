@@ -18,27 +18,8 @@ function TopBrands({
   const { t } = useTranslation();
   const [data, setData] = useState([]);
   const [topData, setTopData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [step, setStep] = useState(4);
   const [isAllElements, setAllElements] = useState(false);
-  const [isShuffled, setIsShuffled] = useState(false);
-
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768, // Порог для мобильных устройств
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      // Дополнительные настройки для других порогов медиа-запросов
-    ],
-  };
 
   const urlParams = new URLSearchParams(window.location.search);
   const brandValue = urlParams.get("brand");
@@ -64,12 +45,11 @@ function TopBrands({
     setStep(prevIndex => prevIndex + 4);
   }
 
-  console.log("============", source);
+  console.log("source:", source);
   useEffect(() => {
     const geo = selectedCountry.toUpperCase();
     console.log("GEO", geo);
     const fetchData = async () => {
-      setIsLoading(true);
       try {
         let url;
         switch (source) {
@@ -91,7 +71,6 @@ function TopBrands({
           const responseData = await res.json();
           // const dataArray = Object.values(responseData.brandsNew);
           let filteredData = [];
-          console.log("respons3dData", responseData.brandsNew);
           if (geo) {
             filteredData = responseData.brandsNew.filter(
               (rowData) =>
@@ -136,9 +115,9 @@ function TopBrands({
           const arrLength = filteredDataWithTopData.length / 2
 
           setData(showData(filteredDataWithTopData.slice(0, arrLength)));
+          // setData(showData(filteredDataWithTopData));
 
           setTopData([...topData]);
-          setIsLoading(false);
 
           // Если нет брендов, вызывать setSelectedCountry
           if (filteredDataWithTopData.length === 0) {
@@ -159,7 +138,6 @@ function TopBrands({
   }, [ipDataCode, brandValue, currentLanguage, selectedCountry, source, step, isAllElements]);
 
   const combinedData = [...topData, ...data];
-  console.log("combined", combinedData);
 
   return (
     <div>
@@ -167,8 +145,6 @@ function TopBrands({
         <div id="ttsmartblog" className="style2 otherBrands">
           <div className="tt-title d-inline-block float-none w-100 text-center">{t("Summer's Best Casino Bonuses! 🌞✨")}</div>
           <div className="container">
-            <div className="animationBG"></div>
-            <div className="animationBG2"></div>
             <div className="smartblog-content row">
               {data.map((rowData, index) => (
                 <div className="ttblog  col-xl-3 col-lg-3 col-sm-6">
@@ -202,29 +178,29 @@ function TopBrands({
               )
               )}
             </div>
-            </div>
-            {isAllElements ? (
-              <a href={`https://topbon.us/${newUrl}L_enchanted-forest_1`} class="button-drawing type--A" target="_blank">
-                <div class="button__line"></div>
-                <div class="button__line"></div>
-                <span class="button__text">{t("More offers")}</span>
-                <div class="button__drow1"></div>
-                <div class="button__drow2"></div>
-              </a>
-            ) : (
-              <a class="button-drawing type--A" target="_blank"
-                onClick={loadMoreItems}>
-                <div class="button__line"></div>
-                <div class="button__line"></div>
-                <span class="button__text">{t("Show more")}</span>
-                <div class="button__drow1"></div>
-                <div class="button__drow2"></div>
-              </a>
-            )}
           </div>
-      )}
+          {isAllElements ? (
+            <a href={`https://topbon.us/${newUrl}L_enchanted-forest_1`} className="button-drawing type--A" target="_blank">
+              <div className="button__line"></div>
+              <div className="button__line"></div>
+              <span className="button__text">{t("More offers")}</span>
+              <div className="button__drow1"></div>
+              <div className="button__drow2"></div>
+            </a>
+          ) : (
+            <a className="button-drawing type--A" target="_blank"
+              onClick={loadMoreItems}>
+              <div className="button__line"></div>
+              <div className="button__line"></div>
+              <span className="button__text">{t("Show more")}</span>
+              <div className="button__drow1"></div>
+              <div className="button__drow2"></div>
+            </a>
+          )}
         </div>
-      );
+      )}
+    </div>
+  );
 }
 
-      export default TopBrands;
+export default TopBrands;
