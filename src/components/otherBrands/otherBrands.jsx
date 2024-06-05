@@ -83,7 +83,7 @@ function OtherBrands({
                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                rowData["Networks"] === "1"
+                rowData["High_hybrid"] === "1"
             );
           } else {
             filteredDataOther = responseData.brandsNew.filter(
@@ -93,23 +93,13 @@ function OtherBrands({
                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                rowData["Networks"] === "1"
+                rowData["High_hybrid"] === "1"
             );
           }
           console.log("EE", filteredDataOther)
-          // Перемешиваем данные перед отображением
-          if (isShuffled) {
-            for (let i = filteredDataWithTopData.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [filteredDataWithTopData[i], filteredDataWithTopData[j]] = [
-                filteredDataWithTopData[j],
-                filteredDataWithTopData[i],
-              ];
-            }
-            setIsShuffled(true);
-          }
+          const arrLength = filteredDataOther.length / 2
 
-          setOtherData(showData(filteredDataOther));
+          setOtherData(showData(filteredDataOther.slice(arrLength)));
           setLoading(false);
 
           // Если нет брендов, вызывать setSelectedCountry
@@ -136,12 +126,13 @@ function OtherBrands({
     <div>
       {otherData.length > 0 && (
         <div id="ttsmartblog" className="style2 my-40 my-sm-25">
-          <div className="tt-title d-inline-block float-none w-100 text-center text-capitalize">{t("Joker's New Favorites: Fresh and Exciting Casinos")}</div>
+          <div className="tt-title d-inline-block float-none w-100 text-center">{t("Exclusive Summer Specials – Limited Time Only! 🌞⏳")}</div>
           <div className="container">
+          <div className="palmAnimation"></div>
             <div className="smartblog-content row">
               {otherData.length > 0 ? (
                 otherData.map((rowData, index) => (
-                  <div className="ttblog  col-xl-3 col-lg-3">
+                  <div className="ttblog  col-xl-3 col-lg-3 col-sm-6">
                     <div className="item">
                       <div className="ttblog_image_holder">
                         <a href={

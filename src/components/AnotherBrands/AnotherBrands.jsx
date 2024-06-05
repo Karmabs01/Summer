@@ -73,7 +73,7 @@ function AnotherBrands({
                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                rowData["Networks"] === "1"
+                rowData["High_hybrid"] === "1"
             );
           } else {
             filteredDataOther = responseData.brandsNew.filter(
@@ -83,7 +83,7 @@ function AnotherBrands({
                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                rowData["Networks"] === "1"
+                rowData["High_hybrid"] === "1"
             );
           }
 
@@ -120,7 +120,7 @@ function AnotherBrands({
             <div class="hero-content top-greadient">
               <h1 class="wow fadeInLeft mb-20" data-wow-delay=".2s"> {t("Hello, summer!")}</h1>
               <h4 class="wow fadeInUp" data-wow-delay=".4s">
-                {t("We've handpicked the most exclusive and jaw-dropping bonuses from top-tier online casinos just for you. The Joker's treasure trove of rewards is just a click away!")}
+                {t("Discover top online casino offers, exclusive bonuses, free spins, and more. Try your luck with these sizzling summer deals!")}
               </h4>
 
             </div>

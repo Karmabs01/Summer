@@ -100,7 +100,7 @@ function TopBrands({
                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                rowData["Networks"] === "1"
+                rowData["High_hybrid"] === "1"
             );
           } else {
             filteredData = responseData.brandsNew.filter(
@@ -110,7 +110,7 @@ function TopBrands({
                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                rowData["Networks"] === "1"
+                rowData["High_hybrid"] === "1"
             );
           }
 
@@ -133,18 +133,9 @@ function TopBrands({
             return !existsInTopData;
           });
 
-          // Перемешиваем данные перед отображением
-          if (isShuffled) {
-            for (let i = filteredDataWithTopData.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              [filteredDataWithTopData[i], filteredDataWithTopData[j]] = [
-                filteredDataWithTopData[j],
-                filteredDataWithTopData[i],
-              ];
-            }
-            setIsShuffled(true);
-          }
-          setData(showData(filteredDataWithTopData));
+          const arrLength = filteredDataWithTopData.length / 2
+
+          setData(showData(filteredDataWithTopData.slice(0, arrLength)));
 
           setTopData([...topData]);
           setIsLoading(false);
@@ -173,12 +164,14 @@ function TopBrands({
   return (
     <div>
       {data.length > 0 && (
-        <div id="ttsmartblog" className="style2 my-40 my-sm-25">
-          <div className="tt-title d-inline-block float-none w-100 text-center text-capitalize">{t("Summer is coming! Fresh and Exciting Casinos are waiting! ")}</div>
+        <div id="ttsmartblog" className="style2 otherBrands">
+          <div className="tt-title d-inline-block float-none w-100 text-center">{t("Summer's Best Casino Bonuses! 🌞✨")}</div>
           <div className="container">
+            <div className="animationBG"></div>
+            <div className="animationBG2"></div>
             <div className="smartblog-content row">
               {data.map((rowData, index) => (
-                <div className="ttblog  col-xl-3 col-lg-3">
+                <div className="ttblog  col-xl-3 col-lg-3 col-sm-6">
                   <div className="item">
                     <div className="ttblog_image_holder">
                       <a href={
