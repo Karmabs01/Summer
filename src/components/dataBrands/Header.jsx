@@ -233,14 +233,14 @@ function ChildComponent() {
                 </div>
               )}
             </div>
-            {Object.keys(user).length > 0 && (
+            {/* {Object.keys(user).length > 0 && (
               <div className="shop">
                 <Link to={`https://topbon.us/shop/${newUrl}`}>
                   <img id="shop" src={`.${shop}`} alt={shop} />
                   {t("Shop")}
                 </Link>
               </div>
-            )}
+            )} */}
             <LanguageSelector ipDataCode={ipDataCode} source={source} />
             {Object.keys(user).length > 0 && (
             <React.Fragment>

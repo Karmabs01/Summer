@@ -56,7 +56,7 @@
   --button-line_color: #464646;
   --button-back_color: #5bffce9c;
   /* --radial: radial-gradient(#968768, #968768, #968768); */
-  --header-font-color: #000000;
+  --header-font-color: #ffffff;
   --font-color: #fff ;
   --second-color: #942a00;
   --darker-second-color: #685e09;
@@ -96,6 +96,19 @@
 }
 
 .MuiSelect-select {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: #000 !important;
+  font-size: 20px !important;
+  position: relative;
+}
+
+.MuiIconButton-root {
+  background-color: #ffffff !important;
+}
+
+header .MuiSelect-select {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -1302,7 +1315,6 @@ header select {
   border-radius: 12px;
   border: var(--border) !important;
   background:var(--header-background-color);
-
   outline: none;
   text-align: center;
   width: auto;
@@ -1317,7 +1329,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 99;
-  background-color: transparent;
+  background:var(--header-background-color);
   box-shadow: var(--box-shadow);
   position: fixed;
   transition: all 0.5s ease-out 0s;
@@ -2260,6 +2272,9 @@ figure {
   position: absolute;
   top: -5px;
   right: -10px;
+}
+header .container .relative {
+  margin-right: 15px;
 }
 .menu-content .overflow {
   background: rgba(35, 34, 73, 0.24);
