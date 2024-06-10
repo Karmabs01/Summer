@@ -245,7 +245,7 @@ function ChildComponent() {
             {Object.keys(user).length > 0 && (
             <React.Fragment>
               <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-                <Tooltip title="Account settings">
+                <Tooltip title="Account">
                   <IconButton
                     onClick={handleClick}
                     size="small"
@@ -299,7 +299,7 @@ function ChildComponent() {
                       to={`https://topbon.us/personal/${newUrl}`}
                       className="balanceWithdraw"
                     >
-                     Profile
+                     {t("Profile")}
                     </Link>
                 </MenuItem>
                 <Divider />
