@@ -1326,12 +1326,25 @@ header {
   background:var(--header-background-color);
 }
 
-.tickets a, .option {
+.tickets a, .option, .shop a {
   color: var(--header-font-color) !important;
 }
 .tickets span {
   color: var(--second-color) !important;
 }
+
+.shop {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.shop img {
+  margin-right: 5px;
+}
+
 footer .wrapper .container {
   margin-top: 0;
 }
@@ -1405,9 +1418,7 @@ header .container {
   align-items: center;
   padding: 10px 0;
 }
-header .container .relative {
-  margin-right: 15px;
-}
+
 .tickets a {
   text-decoration: none;
 }

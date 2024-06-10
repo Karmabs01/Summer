@@ -390,14 +390,14 @@
   }
   .balanceWithdraw {
     font-size: 18px;
-    color: #fff;
+    color: #000000;
     font-weight: 900;
     margin-bottom: 10px;
   }
   .balanceWithdraw span {
     font-size: 18px;
     font-weight: 900;
-    color: #ff9c19;
+    color: #bb6a00;
   }
   .mobile-menu .btn-menu {
     position: relative;
@@ -425,7 +425,7 @@
     margin-right: 10px;
   }
   .wallet p {
-    color: #fff;
+    color: #000;
     margin-left: 5px;
     font-size: 14px;
     font-weight: 700;
@@ -473,6 +473,7 @@
     min-width: initial !important;
     border-radius: 12px !important;
     border: none !important;
+    padding-left: 15px !important;
   }
 
   .additional-options {
@@ -558,8 +559,12 @@
   .roulete-banner-home img {
     border-radius: 15px;
   }
-  .parent .option {
+  .parent .option, .additional-options .option a {
     font-size: 14px;
+  }
+  .shop, .tickets {
+    font-size: 14px !important;
+    margin-left: 0 !important;
   }
   .top-footer {
     flex-wrap: wrap;
@@ -1021,6 +1026,9 @@
   }
   .header-wrapper {
     flex-wrap: wrap;
+  }
+  .tickets {
+    margin-right: 0 !important;
   }
   .header-wrapper .mneu-btn-grp {
     display: none;

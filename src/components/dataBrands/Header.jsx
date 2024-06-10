@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import logo from "../../../src/img/logo2.png";
+import logo from "../../../src/img/logo.png";
 import arrow from "../../../src/img/arrow-down.png";
 import { Link } from "react-router-dom";
 import Loader from "../Loader/Loader";
@@ -8,6 +8,8 @@ import LanguageSelectorMobile from "../LanguageSelectorMobile";
 import profile from "../../img/prof.svg";
 import wallet from "../../img/wallet.svg";
 import dollar from "../../img/dollar.svg";
+import shop from "../../img/shop.svg";
+
 import { useTranslation } from "react-i18next";
 
 function ChildComponent() {
@@ -208,9 +210,17 @@ function ChildComponent() {
                 </div>
               )}
             </div>
-         
-              <LanguageSelector ipDataCode={ipDataCode} source={source} />
-          
+            {Object.keys(user).length > 0 && (
+              <div className="shop">
+                <Link to={`https://topbon.us/shop/${newUrl}`}>
+                  <img id="shop" src={`.${shop}`} alt={shop} />
+                  {t("Shop")}
+                </Link>
+              </div>
+            )}
+
+            <LanguageSelector ipDataCode={ipDataCode} source={source} />
+
           </div>
         ) : (
           <div className="flex ml-auto items-center">
@@ -258,12 +268,20 @@ function ChildComponent() {
                     {/* Другие элементы меню для мобильного вида */}
                     {/* ... */}
                   </div>
+                  {Object.keys(user).length > 0 && (
+                      <div>
+                        <Link className="balanceWithdraw" to={`https://topbon.us/shop/${newUrl}`}>
+                          <img className="mr-1" src={`.${shop}`} alt={shop} />
+                          {t("Cards shop")}
+                        </Link>
+                      </div>
+                    )}
                 </div>
               )}
             </div>
-         
+
             <LanguageSelectorMobile ipDataCode={ipDataCode} source={source} />
-        
+
           </div>
         )}
       </div>
