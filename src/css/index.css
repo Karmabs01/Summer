@@ -1301,7 +1301,8 @@ header select {
   cursor: pointer;
   border-radius: 12px;
   border: var(--border) !important;
-  background-color: transparent;
+  background:var(--header-background-color);
+
   outline: none;
   text-align: center;
   width: auto;
@@ -1321,11 +1322,6 @@ header {
   position: fixed;
   transition: all 0.5s ease-out 0s;
 }
-
-.header.scrolled {
-  background:var(--header-background-color);
-}
-
 .tickets a, .option, .shop a {
   color: var(--header-font-color) !important;
 }

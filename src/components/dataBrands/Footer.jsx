@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-import logo from "../../../src/img/logo.png";
+import logo from "../../../src/img/logo2.png";
 
 import plus from "../../../src/img/18plus.png";
 import gamblers from "../../../src/img/gamblers.png";
