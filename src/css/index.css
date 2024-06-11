@@ -53,8 +53,9 @@
   --background-color: #ffe2ac ;
   --footer-background-color: linear-gradient(0deg, #FBBC53 11%, #f6844f00 88%);
   
-  --button-line_color: #464646;
-  --button-back_color: #5bffce9c;
+  --button-line_color: #13af79;
+  --button-back_color: #9afddf9c;
+  --button-hover-color: #00aeff;
   /* --radial: radial-gradient(#968768, #968768, #968768); */
   --header-font-color: #ffffff;
   --font-color: #fff ;
@@ -5241,6 +5242,10 @@ p {
 }
 
 .readmore:hover {
-  color: #17a117;
+  color: var(--button-hover-color);
   z-index: 99999;
+}
+
+.readmore {
+  color: var(--button-line_color);
 }
