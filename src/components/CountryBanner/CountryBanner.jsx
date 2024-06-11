@@ -168,7 +168,7 @@ const CountryBanner = ({
                 <a
                   id="hottestBonus"
                   target="_blank"
-                  href={rowData["GoBig"] + newUrl + "L_enchanted-forest_Video"}
+                  href={rowData["GoBig"] + newUrl + "L_summer_Video"}
                 >
                   <img src={rowData["LinkImg"]} alt="" />
                 </a>
@@ -178,7 +178,7 @@ const CountryBanner = ({
                 id="hottestBonus"
                 className="cmn--btn2"
                 target="_blank"
-                href={rowData["GoBig"] + newUrl + "L_enchanted-forest_Video"}
+                href={rowData["GoBig"] + newUrl + "L_summer_Video"}
               >
                 {t("getBonus")}
               </a>

@@ -126,7 +126,7 @@ function AnotherBrands({
             </div>
             {otherData.length > 0 ? (
               otherData.slice(0, 1).map((rowData, index) => (
-                <a key={index} target="_blank" href={rowData["GoBig"] + newUrl + "L_enchanted-forest_random"} className="button-drawing type--A">
+                <a key={index} target="_blank" href={rowData["GoBig"] + newUrl + "L_summer_random"} className="button-drawing type--A">
                   <div className="button__line"></div>
                   <div className="button__line"></div>
                   <span className="button__text">{t("TRY YOUR LUCK")}</span>

@@ -153,7 +153,7 @@ function TopBrands({
                       <a href={
                         rowData["GoBig"] +
                         newUrl +
-                        "L_enchanted-forest_2"
+                        "L_summer_1"
                       }>
                         <img src={rowData["LinkImg"]} alt={rowData["LinkImg"]} />
                       </a>
@@ -166,7 +166,7 @@ function TopBrands({
                           <a className="readmore" href={
                             rowData["GoBig"] +
                             newUrl +
-                            "L_enchanted-forest_2"
+                            "L_summer_1"
                           }>
                             {t("Play Now!")}
                           </a>
@@ -180,7 +180,7 @@ function TopBrands({
             </div>
           </div>
           {isAllElements ? (
-            <a href={`https://topbon.us/${newUrl}L_enchanted-forest_1`} className="button-drawing type--A" target="_blank">
+            <a href={`https://topbon.us/${newUrl}L_summer_1`} className="button-drawing type--A" target="_blank">
               <div className="button__line"></div>
               <div className="button__line"></div>
               <span className="button__text">{t("More offers")}</span>
