@@ -100,7 +100,7 @@ function TopBrands({
                 rowData["CasinoBrand"] !== "Mirax (FS)" &&
                 rowData["CasinoBrand"] !== "Katsubet (FS)" &&
                 rowData["CasinoBrand"] !== "7Bit (FS)" &&
-                rowData["FirstPriority"] === "1"
+                rowData["Trendsetting"] === "1"
             );
           }
 
