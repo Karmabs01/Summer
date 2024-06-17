@@ -86,6 +86,17 @@ function AnotherBrands({
                 rowData["High_hybrid"] === "1"
             );
           }
+          if (geo === "ALL") {
+            filteredDataOther = responseData.brandsNew.filter(
+              (rowData) =>
+                rowData.GEO === geo &&
+                rowData["CurrentStatus"] === "Ongoing" &&
+                rowData["CasinoBrand"] !== "Mirax (FS)" &&
+                rowData["CasinoBrand"] !== "Katsubet (FS)" &&
+                rowData["CasinoBrand"] !== "7Bit (FS)" &&
+                rowData["FirstPriority"] === "1"
+            );
+          }
 
           // Перемешиваем данные перед отображением
           setOtherData(shuffleArray(filteredDataOther));

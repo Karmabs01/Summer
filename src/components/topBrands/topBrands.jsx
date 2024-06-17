@@ -92,6 +92,17 @@ function TopBrands({
                 rowData["High_hybrid"] === "1"
             );
           }
+          if (geo === "ALL") {
+            filteredData = responseData.brandsNew.filter(
+              (rowData) =>
+                rowData.GEO === geo &&
+                rowData["CurrentStatus"] === "Ongoing" &&
+                rowData["CasinoBrand"] !== "Mirax (FS)" &&
+                rowData["CasinoBrand"] !== "Katsubet (FS)" &&
+                rowData["CasinoBrand"] !== "7Bit (FS)" &&
+                rowData["FirstPriority"] === "1"
+            );
+          }
 
           const topData = responseData.brandsNew
             .filter((rowData) => rowData.Tech === brandValue)
