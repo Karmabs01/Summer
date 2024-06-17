@@ -125,8 +125,11 @@ function TopBrands({
 
           const arrLength = filteredDataWithTopData.length / 2
 
-          setData(showData(filteredDataWithTopData.slice(0, arrLength)));
-          // setData(showData(filteredDataWithTopData));
+          if (geo !== "ALL") {
+            setData(showData(filteredDataWithTopData.slice(0, arrLength)));
+          } else {
+            setData(showData(filteredDataWithTopData));
+          }
 
           setTopData([...topData]);
 

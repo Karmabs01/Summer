@@ -108,8 +108,12 @@ function OtherBrands({
 
           const arrLength = filteredDataOther.length / 2
 
-          setOtherData(showData(filteredDataOther.slice(arrLength)));
-          // setOtherData(showData(filteredDataOther));
+          
+          if (geo !== "ALL") {
+            setOtherData(showData(filteredDataOther.slice(arrLength)));
+          } else {
+            setOtherData(showData(filteredDataOther));
+          }
           setLoading(false);
 
           // Если нет брендов, вызывать setSelectedCountry
