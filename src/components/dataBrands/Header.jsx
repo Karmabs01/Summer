@@ -92,7 +92,7 @@ function ChildComponent() {
   }, []);
 
   const menuRef = useRef(null);
-  const api = "https://pickbonus.myawardwallet.com/api";
+  const api = "https://bonusnumber1.com/api";
   useEffect(() => {
     const idUserParam = urlParams.get("keyword");
 
