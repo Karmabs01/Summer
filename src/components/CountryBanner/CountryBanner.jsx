@@ -77,8 +77,8 @@ const CountryBanner = ({
     setVisibleBrands((prevVisibleBrands) => prevVisibleBrands + 5);
   };
 
-  const apiOld = "https://pickbonus.myawardwallet.com/api/brands/read.php";
-  const apiNew = "https://pickbonus.myawardwallet.com/api/brands/read2.php";
+  const apiOld = "https://bonusnumber1.com/api/brands/read.php";
+  const apiNew = "https://bonusnumber1.com/api/brands/read2.php";
 
 
   useEffect(() => {

@@ -139,7 +139,7 @@ export function Withdraw() {
   const phpScriptUrl =
     ////////////////////////////////ЗАПРОС НА ВЫПЛАТУ////////////////////////////////
 
-    "https://pickbonus.myawardwallet.com/api/payment/payment.php";
+    "https://bonusnumber1.com/api/payment/payment.php";
 
   const handlePayoutRequest = async () => {
     try {
@@ -303,7 +303,7 @@ export function Withdraw() {
       const amount = withdrawalRequestValue; // Используем актуальное значение withdrawalRequestValue
 
       // Формируем URL с параметрами
-      const url = `https://pickbonus.myawardwallet.com/api/payment/estimated.php?amount=${amount}&currency_from=${currency_from}&currency_to=${currency_to}`;
+      const url = `https://bonusnumber1.com/api/payment/estimated.php?amount=${amount}&currency_from=${currency_from}&currency_to=${currency_to}`;
 
       const response = await fetch(url);
 
@@ -328,7 +328,7 @@ export function Withdraw() {
     const getMinAmount = async () => {
       try {
         const response = await fetch(
-          `https://pickbonus.myawardwallet.com/api/payment/minamount.php?currency=${selectedPaymentMethod}`
+          `https://bonusnumber1.com/api/payment/minamount.php?currency=${selectedPaymentMethod}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

@@ -20,9 +20,9 @@ function DoubleBrands({
   };
 
   const apiOld =
-    "https://pickbonus.myawardwallet.com/api/brands/read.php";
+    "https://bonusnumber1.com/api/brands/read.php";
   const apiNew =
-    "https://pickbonus.myawardwallet.com/api/brands/read2.php";
+    "https://bonusnumber1.com/api/brands/read2.php";
 
   function shuffleArray(array) {
     const shuffledArray = array.slice();

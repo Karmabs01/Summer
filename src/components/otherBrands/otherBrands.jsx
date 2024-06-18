@@ -26,10 +26,10 @@ function OtherBrands({
   //   setVisibleBrands((prevVisibleBrands) => prevVisibleBrands + 8);
   // };
 
-  const apiOld = "https://pickbonus.myawardwallet.com/api/brandsNew/read.php";
-  const apiNew = "https://pickbonus.myawardwallet.com/api/brandsNew2/read.php";
-  const api1043 = "https://pickbonus.myawardwallet.com/api/brandsNew3/read.php";
-  const api1044 = "https://pickbonus.myawardwallet.com/api/brandsNew4/read.php";
+  const apiOld = "https://bonusnumber1.com/api/brandsNew/read.php";
+  const apiNew = "https://bonusnumber1.com/api/brandsNew2/read.php";
+  const api1043 = "https://bonusnumber1.com/api/brandsNew3/read.php";
+  const api1044 = "https://bonusnumber1.com/api/brandsNew4/read.php";
 
   function showData(array) {
     const showedArray = array.slice();
