@@ -148,11 +148,7 @@ function OtherBrands({
                   <div className="ttblog  col-xl-3 col-lg-3 col-sm-6">
                     <div className="item">
                       <div className="ttblog_image_holder">
-                        <a href={
-                          rowData["GoBig"] +
-                          newUrl +
-                          "L_summer_2"
-                        }>
+                        <a  target="_blank" href={ rowData["GoBig"] + newUrl + "L_summer_2" }>
                           <img src={rowData["LinkImg"]} alt={rowData["LinkImg"]} />
                         </a>
                       </div>
@@ -161,11 +157,7 @@ function OtherBrands({
                           <h4 className="blog-title"><span>{rowData["CasinoBrand"]}</span></h4>
                           <div className="blog-desc">{rowData["OurOfferContent"]}</div>
                           <div className="read-more text-capitalize">
-                            <a className="readmore" href={
-                              rowData["GoBig"] +
-                              newUrl +
-                              "L_summer_2"
-                            }>
+                            <a  target="_blank" className="readmore" href={ rowData["GoBig"] + newUrl + "L_summer_2"}>
                               {t("Play Now!")}
                             </a>
                           </div>
