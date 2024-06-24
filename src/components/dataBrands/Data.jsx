@@ -47,6 +47,7 @@ function ChildComponent() {
   const countryOptions1043 = [
     { code: "all", name: "World", flag: "🌍" }, 
     { code: "ca", name: "Canada", flag: "🇨🇦" },
+    { code: "us", name: "USA", flag: "usa" },
   ];
 
   const countryOptions1044 = [
@@ -63,6 +64,7 @@ function ChildComponent() {
     { code: "pl", name: "Poland", flag: "🇵🇱" },
     { code: "se", name: "Sweden", flag: "🇸🇪" },
     { code: "ch", name: "Switzerland", flag: "🇨🇭" },
+    { code: "us", name: "USA", flag: "usa" },
     { code: "all", name: "World", flag: "🌍" },
   ];
 
