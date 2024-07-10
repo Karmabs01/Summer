@@ -30,6 +30,7 @@ function OtherBrands({
   const apiNew = "https://bonusnumber1.com/api/brandsNew2/read.php";
   const api1043 = "https://bonusnumber1.com/api/brandsNew3/read.php";
   const api1044 = "https://bonusnumber1.com/api/brandsNew4/read.php";
+  const apiCLD_VIP = "https://bonusnumber1.com/api/brandsNew5/read.php";
 
   function showData(array) {
     const showedArray = array.slice();
@@ -62,6 +63,9 @@ function OtherBrands({
             break;
           case "partner1044":
             url = api1044; // Для partner1044
+            break;
+          case "CLD_VIP":
+            url = apiCLD_VIP; // CLD_VIP
             break;
           default:
             url = apiOld; // Для всех остальных случаев
@@ -108,7 +112,7 @@ function OtherBrands({
 
           const arrLength = filteredDataOther.length / 2
 
-          
+
           if (geo !== "ALL") {
             setOtherData(showData(filteredDataOther.slice(arrLength)));
           } else {
@@ -148,7 +152,7 @@ function OtherBrands({
                   <div className="ttblog  col-xl-3 col-lg-3 col-sm-6">
                     <div className="item">
                       <div className="ttblog_image_holder">
-                        <a  target="_blank" href={ rowData["GoBig"] + newUrl + "L_summer_2" }>
+                        <a target="_blank" href={rowData["GoBig"] + newUrl + "L_summer_2"}>
                           <img src={rowData["LinkImg"]} alt={rowData["LinkImg"]} />
                         </a>
                       </div>
@@ -157,7 +161,7 @@ function OtherBrands({
                           <h4 className="blog-title"><span>{rowData["CasinoBrand"]}</span></h4>
                           <div className="blog-desc">{rowData["OurOfferContent"]}</div>
                           <div className="read-more text-capitalize">
-                            <a  target="_blank" className="readmore" href={ rowData["GoBig"] + newUrl + "L_summer_2"}>
+                            <a target="_blank" className="readmore" href={rowData["GoBig"] + newUrl + "L_summer_2"}>
                               {t("Play Now!")}
                             </a>
                           </div>

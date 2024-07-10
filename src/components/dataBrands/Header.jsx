@@ -158,7 +158,7 @@ function ChildComponent() {
 
     // Проверяем, содержит ли 'keyword' идентификатор партнера
     if (currentSource) {
-      const match = currentSource.match(/partner(_)?\d+/);
+      const match = currentSource.match(/(partner(_)?\d+|CLD_VIP)/);
       if (match) {
         sourceValue = match[0]; // Извлекаем идентификатор партнера
         setSource(sourceValue); // Обновляем состояние 'source' с найденным значением

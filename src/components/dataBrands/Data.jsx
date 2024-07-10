@@ -95,6 +95,28 @@ function ChildComponent() {
     { code: "all", name: "World", flag: "🌍" },
   ];
 
+  const countryOptionsCLD_VIP = [
+    { code: "au", name: "Australia", flag: "🇦🇺" },
+    { code: "at", name: "Austria", flag: "🇦🇹" },
+    { code: "be", name: "Belgium", flag: "🇧🇪" },
+    { code: "ca", name: "Canada", flag: "🇨🇦" },
+    { code: "ch", name: "Switzerland", flag: "🇨🇭" },
+    { code: "cz", name: "The Czech Republic", flag: "🇨🇿" },
+    { code: "de", name: "Germany", flag: "🇩🇪" },
+    { code: "dk", name: "Denmark", flag: "🇩🇰" },
+    { code: "fi", name: "Finland", flag: "🇫🇮" },
+    { code: "fr", name: "France", flag: "🇫🇷" },
+    { code: "gr", name: "Greece", flag: "🇬🇷" },
+    { code: "hu", name: "Hungary", flag: "🇭🇺" },
+    { code: "ie", name: "Ireland", flag: "🇮🇪" },
+    { code: "it", name: "Italy", flag: "🇮🇹" },
+    { code: "no", name: "Norway", flag: "🇳🇴" },
+    { code: "nz", name: "New Zealand", flag: "🇳🇿" },
+    { code: "pl", name: "Poland", flag: "🇵🇱" },
+    { code: "se", name: "Sweden", flag: "🇸🇪" },
+    { code: "sk", name: "Slovakia", flag: "🇸🇰" },
+    { code: "all", name: "World", flag: "🌍" },
+  ];
 
   useEffect(() => {
     fetch(
@@ -118,7 +140,7 @@ function ChildComponent() {
     let sourceValue = "0";
 
     if (currentSource) {
-      const match = currentSource.match(/partner(_)?\d+/);
+      const match = currentSource.match(/(partner(_)?\d+|CLD_VIP)/);
       if (match) {
         sourceValue = match[0];
         setSource(sourceValue);
@@ -199,6 +221,34 @@ function ChildComponent() {
         </Box>
       </div>
       )}
+        {source === "CLD_VIP" && (
+        <div className="select-brand container">
+          <Box sx={{ m: 1, minWidth: 300 }}>
+            <FormControl fullWidth>
+              <InputLabel>{t("select")}</InputLabel>
+              <Select
+                id="countrySelect"
+                value={selectedCountry}
+                label={t("select")}
+                ref={selectRef}
+                onMouseDown={handleMouseDown}
+                onChange={(e) => handleCountryChange(e.target.value)}
+              >
+                {countryOptionsCLD_VIP.map((country, index) => (
+                  <MenuItem
+                    key={index}
+                    value={country.code}
+                    selected={country.code === ipDataCode}
+                  >
+                    <div className={country.code}></div>
+                    {country.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Box>
+        </div>
+      )}
       {source === "partner1044" && (
         <div className="select-brand container">
         <Box sx={{ m: 1, minWidth: 300 }}>
@@ -255,7 +305,7 @@ function ChildComponent() {
         </Box>
       </div>
       )}
-      {source !== "partner1044" && source !== "partner1043" && source !== "partner1039" &&  (
+      {source !== "partner1044" && source !== "partner1043" && source !== "partner1039" && source !== "CLD_VIP" &&   (
         <div className="select-brand container">
           <Box sx={{ m: 1, minWidth: 300 }}>
             <FormControl fullWidth>
