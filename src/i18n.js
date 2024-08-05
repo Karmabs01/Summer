@@ -111,7 +111,7 @@ const resources = {
 
 const getUserIP = async () => {
   try {
-    const response = await fetch("https://ipapi.co/json/");
+    const response = await fetch("https://ipapi.co/json/?key=YD0x5VtXrPJkOcFQMjEyQgqjfM6jUcwS4J54b3DI8ztyrFpHzW");
     const data = await response.json();
     const { country } = data; // Предполагаем, что свойство "country" содержит код языка, например, "en", "es", "pl"
     return country.toLowerCase(); // Преобразуем код языка в нижний регистр (например, "EN" -> "en")

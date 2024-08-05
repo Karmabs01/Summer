@@ -91,7 +91,7 @@ const Wheel = () => {
   useEffect(() => {
     // Запрос к API с использованием fetch
     fetch(
-      "https://ipapi.co/json/"
+      "https://ipapi.co/json/?key=YD0x5VtXrPJkOcFQMjEyQgqjfM6jUcwS4J54b3DI8ztyrFpHzW"
     )
       .then((response) => response.json())
       .then((data) => {
