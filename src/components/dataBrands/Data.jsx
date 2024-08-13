@@ -116,6 +116,7 @@ function ChildComponent() {
     { code: "no", name: "Norway", flag: "🇳🇴" },
     { code: "nz", name: "New Zealand", flag: "🇳🇿" },
     { code: "pl", name: "Poland", flag: "🇵🇱" },
+    { code: "pt", name: "Portugal", flag: "🇵🇹" },
     { code: "se", name: "Sweden", flag: "🇸🇪" },
     { code: "sk", name: "Slovakia", flag: "🇸🇰" },
     { code: "all", name: "World", flag: "🌍" },
@@ -224,7 +225,7 @@ function ChildComponent() {
         </Box>
       </div>
       )}
-        {source === "CLD_VIP" && (
+      {source === "CLD_VIP" || source === "partner1045" && (
         <div className="select-brand container">
           <Box sx={{ m: 1, minWidth: 300 }}>
             <FormControl fullWidth>
@@ -308,7 +309,7 @@ function ChildComponent() {
         </Box>
       </div>
       )}
-      {source !== "partner1044" && source !== "partner1043" && source !== "partner1039" && source !== "CLD_VIP" &&   (
+      {source !== "partner1044" && source !== "partner1043" && source !== "partner1039" && source !== "CLD_VIP" &&  source !== "partner1045" && (
         <div className="select-brand container">
           <Box sx={{ m: 1, minWidth: 300 }}>
             <FormControl fullWidth>
