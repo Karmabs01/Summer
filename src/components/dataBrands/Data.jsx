@@ -124,7 +124,7 @@ function ChildComponent() {
 
   useEffect(() => {
     fetch(
-      "https://ipapi.co/json/?key=YD0x5VtXrPJkOcFQMjEyQgqjfM6jUcwS4J54b3DI8ztyrFpHzW"
+      "https://ipapi.co/json/"
     )
       .then((response) => response.json())
       .then((data) => {
